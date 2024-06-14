@@ -1,0 +1,546 @@
+{
+    "topsites": [
+        {
+            "title": "百度一下，你就知道",
+            "url": "http://wap.baidu.com/",
+            "keywords": "baidu;百度;com"
+        },
+        {
+            "title": "腾讯首页",
+            "url": "http://3g.qq.com/",
+            "keywords": "腾讯;qq;3g.q;teng"
+        },
+        {
+            "title": "新浪首页",
+            "url": "http://3g.sina.com.cn/",
+            "keywords": "sina;新浪;com"
+        },
+        {
+            "title": "搜搜更懂你",
+            "url": "http://wap.soso.com/",
+            "keywords": "soso;搜搜;com"
+        },
+        {
+            "title": "百度知道 - 全球最大中文互动问答平台",
+            "url": "http://zhidao.baidu.com/",
+            "keywords": "zhidao;baidu;百度;知道;问答;com"
+        },
+        {
+            "title": "贴吧 - 全球最大中文社区",
+            "url": "http://tieba.baidu.com/",
+            "keywords": "tieba;贴吧;社区;百度;百度贴吧"
+        },
+        {
+            "title": "百度文库 - 文档分享平台",
+            "url": "http://wenku.baidu.com/",
+            "keywords": "baidu;百度;文库;wenku;文档;"
+        },
+        {
+            "title": "百度身边 - 生活近在身边",
+            "url": "http://s.baidu.com/",
+            "keywords": "s.baidu;baidu;百度;百度身边"
+        },
+        {
+            "title": "优酷网 - 中国第一视频网站",
+            "url": "http://www.youku.com/",
+            "keywords": "视频;优酷;youku;com;shipin"
+        },
+        {
+            "title": "百度视频搜索 - 全球最大中文视频搜索引擎",
+            "url": "http://video.baidu.com/",
+            "keywords": "video;baidu;百度;shipin;视频;电影;电视剧;百度视频搜索"
+        },
+        {
+            "title": "百度影视搜索 - 奇艺网",
+            "url": "http://v.baidu.com/",
+            "keywords": "v.baidu;baidu;奇艺;qiyi;视频;电影;电视剧"
+        },
+        {
+            "title": "搜狐 - 中国最大的门户网站",
+            "url": "http://wap.sohu.com/",
+            "keywords": "sohu;搜狐;com"
+        },
+        {
+            "title": "QQ邮箱",
+            "url": "http://mail.qq.com/",
+            "keywords": "QQ;邮箱;QQ邮箱;you;mail;"
+        },
+        {
+            "title": "土豆网 - 每个人都是生活的导演",
+            "url": "http://www.tudou.com/",
+            "keywords": "tudou;土豆;电视;电影;电视剧;com"
+        },
+        {
+            "title": "淘宝网 - 淘！我喜欢",
+            "url": "http://m.taobao.com/?v=0&amp;ttid=b0ay02",
+            "keywords": "taobao;淘宝;com"
+        },
+        {
+            "title": "hao123 - 我的上网主页",
+            "url": "http://www.hao123.com/",
+            "keywords": "好123;hao;hao123;导航"
+        },
+        {
+            "title": "Google - 谷歌",
+            "url": "http://www.google.com.hk/webhp?client=aff-maxthon-dh&channel=namelist/",
+            "keywords": "google;谷歌"
+        },
+        {
+            "title": "新闻中心_新浪网",
+            "url": "http://news.sina.com.cn/",
+            "keywords": "新闻;xinwen;sina;新浪;news"
+        },
+        {
+            "title": "酷6网 - 中国第一视频门户",
+            "url": "http://ku6.com/",
+            "keywords": "ku6;酷6;视频;电影;电视剧"
+        },
+        {
+            "title": "新浪show视频聊天室 - 第一视频互动平台",
+            "url": "http://chat.sina.com.cn/",
+            "keywords": "视频聊天;shipin;liaotian;聊天;chat.sina;sina"
+        },
+        {
+            "title": "56.com - 中国最大的视频分享网站",
+            "url": "http://www.56.com/",
+            "keywords": "56;视频;电视;电影;电视剧;shipin;"
+        },
+        {
+            "title": "QQ空间 - 我的生活，我的时尚",
+            "url": "http://qzone.qq.com/",
+            "keywords": "qzone;QQ;空间;QQ空间"
+        },
+        {
+            "title": "百度空间 - 真我，真朋友：中文世界最真诚的交友社区",
+            "url": "http://hi.baidu.com/",
+            "keywords": "百度;空间;baidu;百度;hi.baidu"
+        },
+        {
+            "title": "天涯社区 - 全球华人网上家园",
+            "url": "http://www.tianya.cn/",
+            "keywords": "tianya;天涯;社区"
+        },
+        {
+            "title": "搜狗搜索引擎 - 上网从搜狗开始",
+            "url": "http://www.sogou.com/",
+            "keywords": "sougou;搜狗,com"
+        },
+        {
+            "title": "4399小游戏 - 中国最大的游戏平台",
+            "url": "http://www.4399.com/",
+            "keywords": "游戏;小游戏;4399"
+        },
+        {
+            "title": "百度MP3音乐掌门人 - 全球最大中文音乐分享平台",
+            "url": "http://zhangmen.baidu.com/",
+            "keywords": "音乐;yinyue;baidu;baidu;百度;zhangmen;zhangmen.baidu"
+        },
+        {
+            "title": "网易相册 - 相片储存 摄影分享",
+            "url": "http://photo.163.com/",
+            "keywords": "163;wangyi;xiangce;网易;相册;照片;photo;photo.163"
+        },
+        {
+            "title": "网易博客",
+            "url": "http://blog.163.com/",
+            "keywords": "blog;网易;163;blog.163"
+        },
+        {
+            "title": "凤凰网",
+            "url": "http://wap.ifeng.com/",
+            "keywords": "ifeng;新闻;fenghuang;凤凰新闻;"
+        },
+        {
+            "title": "迅雷 - 狗狗首页 - 中国最大的下载资源搜索网站",
+            "url": "http://www.gougou.com/",
+            "keywords": "xunlei;xiazai;下载;迅雷;讯雷;gougou.com"
+        },
+        {
+            "title": "人人网",
+            "url": "http://www.renren.com/",
+            "keywords": "renren;人人;sns"
+        },
+        {
+            "title": "163网易免费邮 - 中文邮箱第一品牌",
+            "url": "http://mail.163.com/",
+            "keywords": "163;youxiang;邮箱;mail.163"
+        },
+        {
+            "title": "搜狐新闻",
+            "url": "http://news.sohu.com/",
+            "keywords": "sou;xinwen;新闻;搜狐;news.sohu;sohu"
+        },
+        {
+            "title": "114啦网址导航 - 最实用的上网主页 上网就上114啦！",
+            "url": "http://www.114la.com/",
+            "keywords": "114;导航;网址;daohang;114la.com"
+        },
+        {
+            "title": "新浪首页",
+            "url": "http://3g.sina.com.cn/?wm=9212_0001",
+            "keywords": "sina;新浪;com"
+        },
+        {
+            "title": "51.com真实交友社区",
+            "url": "http://www.51.com/",
+            "keywords": "51;jiaoyou;shequ;社区;交友"
+        },
+        {
+            "title": "科技时代_新浪网",
+            "url": "http://tech.sina.com.cn/",
+            "keywords": "科技;新闻;新浪科技;keji;tech.sina.com;sina.com"
+        },
+        {
+            "title": "中国工商银行",
+            "url": "http://www.icbc.com.cn/",
+            "keywords": "工商;银行;icbc;yinhang"
+        },
+        {
+            "title": "中华网首页",
+            "url": "http://www.china.com/",
+            "keywords": "zhonghua;中华;xinwen;china.com"
+        },
+        {
+            "title": "中国天气网 - 专业天气预报、气象服务门户",
+            "url": "http://www.weather.com.cn/",
+            "keywords": "tianqi;天气预报;weather.com"
+        },
+        {
+            "title": "阿里巴巴1688.com是全球最大的采购批发市场",
+            "url": "http://china.alibaba.com/",
+            "keywords": "批发;caigou;gouwu;购物;china.alibaba;alibaba;阿里巴巴;1688"
+        },
+        {
+            "title": "汽车之家 - 我的汽车网站，我的汽车之家",
+            "url": "http://www.autohome.com.cn/",
+            "keywords": "汽车之家;qiche;autohome.com"
+        },
+        {
+            "title": "盛大在线 - 专为无物流的文化和虚拟产品提供数字出版的服务平台",
+            "url": "http://www.sdo.com/",
+            "keywords": "shengda;盛大;sdo"
+        },
+        {
+            "title": "网易娱乐 - 有态度的娱乐门户",
+            "url": "http://ent.163.com/",
+            "keywords": "网易娱乐;娱乐;163;ent.163"
+        },
+        {
+            "title": "豆瓣",
+            "url": "http://www.douban.com/",
+            "keywords": "douban;豆瓣"
+        },
+        {
+            "title": "和讯网 - 中国最大财经门户网站",
+            "url": "http://www.hexun.com/",
+            "keywords": "财经;caijing;和讯;hexun"
+        },
+        {
+            "title": "58同城 - 中国第一分类信息网站|免费发布信息",
+            "url": "http://www.58.com/",
+            "keywords": "招聘;二手房;租房;zufang;58;找工作"
+        },
+        {
+            "title": "欢迎来到搜狐白社会！",
+            "url": "http://bai.sohu.com/",
+            "keywords": "搜狐白社会;白社会;baishehui;bai.sohu"
+        },
+        {
+            "title": "电脑之家 - 最具活力的时尚科技门户",
+            "url": "http://www.pchome.net/",
+            "keywords": "diannao;报价;电脑;pchome;电脑之家"
+        },
+        {
+            "title": "泡泡网 - 第一数字产品互动媒体",
+            "url": "http://www.pcpop.com/",
+            "keywords": "paopaowang;泡泡网;报价;电脑;pcpop"
+        },
+        {
+            "title": "中国新闻网新闻中心",
+            "url": "http://www.chinanews.com/",
+            "keywords": "新闻;xinwen;chinanews"
+        },
+        {
+            "title": "中关村在线",
+            "url": "http://3g.zol.com.cn",
+            "keywords": "zol;中关村;中关村在线;3g.z"
+        },
+        {
+            "title": "乐讯",
+            "url": "http://lexun.com",
+            "keywords": "乐讯;lexun;lx;le"
+        },
+        {
+            "title": "多玩",
+            "url": "http://www.duowan.com/m/",
+            "keywords": "多玩;duowan;游戏;youxi;wap.d"
+        },
+        {
+            "title": "和讯",
+            "url": "http://wap.hexun.com",
+            "keywords": "和讯;hexun;hx;wap.hexun.com"
+        },
+        {
+            "title": "58同城",
+            "url": "http://wap.58.com",
+            "keywords": "58;二手;wap.58;同城;tong"
+        },
+        {
+            "title": "手机之家",
+            "url": "http://m.imobile.com.cn/",
+            "keywords": "shoujizhijia;imobile;手机之家"
+        },
+        {
+            "title": "机锋",
+            "url": "http://www.gfan.com",
+            "keywords": "机锋;gfan;gf;jifeng"
+        },
+        {
+            "title": "手机中国",
+            "url": "http://www.cnmo.com",
+            "keywords": "手机中国;手机;cnmo"
+        },
+        {
+            "title": "手机网易",
+            "url": "http://mobile.163.com",
+            "keywords": "163;网易"
+        },
+        {
+            "title": "安极网",
+            "url": "http://www.angeeks.com",
+            "keywords": "安极网;angeeks"
+        },
+        {
+            "title": "友人网",
+            "url": "http://www.younet.com",
+            "keywords": "友人网;younet"
+        },
+        {
+            "title": "京东",
+            "url": "http://www.360buy.com",
+            "keywords": "360;京东;360buy"
+        },
+        {
+            "title": "手机京东",
+            "url": "http://m.360buy.com",
+            "keywords": "360;京东;360buy"
+        },
+        {
+            "title": "亚马逊",
+            "url": "http://www.amazon.cn",
+            "keywords": "亚马逊;amazon;卓越;zhuoyue"
+        },
+        {
+            "title": "凡客",
+            "url": "http://www.vancl.com",
+            "keywords": "凡客;vancl"
+        },
+        {
+            "title": "手机凡客",
+            "url": "http://m.vancl.com",
+            "keywords": "凡客;vancl"
+        },
+        {
+            "title": "3G门户",
+            "url": "http://xuan.3g.cn/",
+            "keywords": "3g;门户;3g门户"
+        },
+        {
+            "title": "猫扑",
+            "url": "http://3g.mop.com",
+            "keywords": "mop;maopu;猫扑"
+        },
+        {
+            "title": "新浪微博",
+            "url": "http://weibo.com",
+            "keywords": "微博;weibo;sina;新浪微博;www"
+        },
+        {
+            "title": "开心网",
+            "url": "http://3g.kaixin001.com",
+            "keywords": "kaixin;开心网;kaixin001;"
+        },
+        {
+            "title": "起点",
+            "url": "http://qidian.cn",
+            "keywords": "qidian;起点网;手机起点网"
+        },
+        {
+            "title": "纵横",
+            "url": "http://wap.zongheng.com",
+            "keywords": "zongheng;纵横;看书;读书"
+        },
+        {
+            "title": "美团",
+            "url": "http://i.meituan.com",
+            "keywords": "美团;meituan;团购;tuangou"
+        },
+        {
+            "title": "拉手网",
+            "url": "http://m.lashou.com/action/index.php",
+            "keywords": "拉手网;lashou;团购;tuangou"
+        },
+        {
+            "title": "糯米网",
+            "url": "http://m.nuomi.com",
+            "keywords": "糯米;nuomi;团购;tuangou"
+        },
+        {
+            "title": "满座",
+            "url": "http://m.manzuo.com/index.htm",
+            "keywords": "满座;manzuo;团购;tuangou"
+        },
+        {
+            "title": "佳缘",
+            "url": "http://3g.jiayuan.com",
+            "keywords": "世纪佳缘;佳缘;交友;jiayuan"
+        },
+        {
+            "title": "糗事",
+            "url": "http://www.qiushibaike.com",
+            "keywords": "糗事百科;qiushi;笑话;xiaohua"
+        },
+        {
+            "title": "安卓网",
+            "url": "http://m.hiapk.com",
+            "keywords": "安卓;hiapk;android;anzhuo"
+        },
+        {
+            "title": "安丰",
+            "url": "http://wap.anfone.com",
+            "keywords": "安丰;anfeng;anfone"
+        },
+        {
+            "title": "安智网",
+            "url": "http://m.anzhi.com/mathonx.php",
+            "keywords": "安智网;anzhi"
+        },
+        {
+            "title": "新华网",
+            "url": "http://3g.xinhuanet.com",
+            "keywords": "新华网;xinhua"
+        },
+        {
+            "title": "空中网",
+            "url": "http://kong.net/home_html.jsp",
+            "keywords": "kong;空中网"
+        },
+        {
+            "title": "环球网",
+            "url": "http://3g.huanqiu.com",
+            "keywords": "环球;huanqiu"
+        },
+        {
+            "title": "泡椒网",
+            "url": "http://a.paojiao.cn/?id=xx_aoyou",
+            "keywords": "泡椒;paojiao"
+        },
+        {
+            "title": "红袖添香",
+            "url": "http://hongxiu.cn/3g/index.aspx",
+            "keywords": "红袖添香;hongxiu"
+        },
+        {
+            "title": "潇湘书院",
+            "url": "http://www.xxsy.net",
+            "keywords": "潇湘书院;xiaoxiang"
+        },
+        {
+            "title": "铁血网",
+            "url": "http://wap.tiexue.net",
+            "keywords": "铁血网;tiexue;tiexie"
+        },
+        {
+            "title": "逐浪小说",
+            "url": "http://www.zhulang.com",
+            "keywords": "zhulang;逐浪小说网"
+        },
+        {
+            "title": "手机天涯",
+            "url": "http://3g.tianya.cn",
+            "keywords": "天涯;tianya"
+        },
+        {
+            "title": "新蛋",
+            "url": "http://m.newegg.com.cn",
+            "keywords": "新蛋;newegg"
+        },
+        {
+            "title": "途牛",
+            "url": "http://m.tuniu.com",
+            "keywords": "途牛网;tuniu"
+        },
+        {
+            "title": "腾讯微博",
+            "url": "http://ti.3g.qq.com",
+            "keywords": "qq;weibo;腾讯微博;tengxun"
+        }
+    ],
+    "quickdial": [
+        {
+            "quickdialid": "930",
+            "title": "百度",
+            "url": "https://go.maxask.com/bd/m/",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2021/07/27/16273514881060.png"
+        },
+        {
+            "quickdialid": "924",
+            "title": "微博",
+            "url": "https://weibo.com/",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2020/10/26/16036936016792.png"
+        },
+        {
+            "quickdialid": "913",
+            "title": "汽车之家",
+            "url": "https://car.m.autohome.com.cn/#pvareaid=6839143",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2020/10/26/16036927519353.png"
+        },
+        {
+            "quickdialid": "928",
+            "title": "爱淘宝",
+            "url": "https://s.click.taobao.com/qJZRSnt",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2023/11/15/17000212578660.png"
+        },
+        {
+            "quickdialid": "927",
+            "title": "中华网",
+            "url": "http://zh.china.com/zh13/",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2020/11/26/16063727689990.png"
+        },
+        {
+            "quickdialid": "926",
+            "title": "拼多多",
+            "url": "https://p.pinduoduo.com/sovbsOFj",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2020/11/02/16043007645014.png"
+        },
+        {
+            "quickdialid": "931",
+            "title": "AI聊天",
+            "url": "https://chat.maxask.com/",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2023/07/29/16906009666823.png"
+        },
+        {
+            "quickdialid": "914",
+            "title": "京东",
+            "url": "https://u.jd.com/kqQlDzg",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2024/05/28/17168639035284.png"
+        }
+    ],
+    "searchEngine": [
+        {
+            "id": "baidu",
+            "version": "38",
+            "url": "https://m.baidu.com/from=1015011h/s?wd={query}",
+            "name": "百度",
+            "searchUrl": "https://m.baidu.com/from=1015011h/s?wd={query}"
+        }
+    ]
+}

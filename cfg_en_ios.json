@@ -1,0 +1,422 @@
+{
+    "topsites": [
+        {
+            "title": "Google",
+            "url": "http://www.google.com.hk/webhp?client:aff-maxthon-maxthon4&amp;channel:t9",
+            "keywords": "google;search"
+        },
+        {
+            "title": "Facebook",
+            "url": "http://www.facebook.com/",
+            "keywords": "facebook;fb"
+        },
+        {
+            "title": "Yahoo!",
+            "url": "http://www.yahoo.com/",
+            "keywords": "yahoo"
+        },
+        {
+            "title": "YouTube",
+            "url": "http://www.youtube.com/",
+            "keywords": "youtube;video"
+        },
+        {
+            "title": "Wikipedia",
+            "url": "http://www.wikipedia.org/",
+            "keywords": "wikipedia"
+        },
+        {
+            "title": "Blogger",
+            "url": "http://www.blogger.com/",
+            "keywords": "blogger"
+        },
+        {
+            "title": "Craigslist",
+            "url": "http://www.craigslist.org/",
+            "keywords": "craigslist"
+        },
+        {
+            "title": "Amazon",
+            "url": "http://www.amazon.com/",
+            "keywords": "amazon"
+        },
+        {
+            "title": "Live",
+            "url": "http://www.live.com/",
+            "keywords": "live"
+        },
+        {
+            "title": "Myspace",
+            "url": "http://www.myspace.com/",
+            "keywords": "myspace"
+        },
+        {
+            "title": "Twitter",
+            "url": "http://www.twitter.com/",
+            "keywords": "twitter"
+        },
+        {
+            "title": "MSN",
+            "url": "http://t.msn.com/",
+            "keywords": "msn"
+        },
+        {
+            "title": "AOL",
+            "url": "http://www.aol.com/",
+            "keywords": "aol"
+        },
+        {
+            "title": "Bing",
+            "url": "http://www.bing.com/",
+            "keywords": "bing"
+        },
+        {
+            "title": "Linkedin",
+            "url": "http://www.linkedin.com/",
+            "keywords": "linkedin"
+        },
+        {
+            "title": "CNN",
+            "url": "http://www.cnn.com/",
+            "keywords": "cnn;news"
+        },
+        {
+            "title": "Wordpress",
+            "url": "http://www.wordpress.com/",
+            "keywords": "wordpress"
+        },
+        {
+            "title": "ESPN",
+            "url": "http://www.espn.go.com/",
+            "keywords": "espn"
+        },
+        {
+            "title": "Flickr",
+            "url": "http://www.flickr.com/",
+            "keywords": "flickr"
+        },
+        {
+            "title": "IMDB",
+            "url": "http://www.imdb.com/",
+            "keywords": "imdb"
+        },
+        {
+            "title": "Microsoft",
+            "url": "http://www.microsoft.com/",
+            "keywords": "microsoft;ms"
+        },
+        {
+            "title": "New York Times",
+            "url": "http://www.nytimes.com/",
+            "keywords": "nytimes"
+        },
+        {
+            "title": "Weather.com",
+            "url": "http://www.weather.com/",
+            "keywords": "weather.com"
+        },
+        {
+            "title": "About.com",
+            "url": "http://www.about.com/",
+            "keywords": "about.com"
+        },
+        {
+            "title": "Netflix",
+            "url": "http://www.netflix.com/",
+            "keywords": "netflix.com"
+        },
+        {
+            "title": "Apple",
+            "url": "http://www.apple.com/",
+            "keywords": "apple.com"
+        },
+        {
+            "title": "BofA",
+            "url": "http://www.bankofamerica.com/",
+            "keywords": "bofa;bankofamerica.com"
+        },
+        {
+            "title": "Photobucket",
+            "url": "http://www.photobucket.com/",
+            "keywords": "photobucket"
+        },
+        {
+            "title": "Comcast",
+            "url": "http://www.comcast.net/",
+            "keywords": "comcast"
+        },
+        {
+            "title": "Mozilla",
+            "url": "http://www.mozilla.com/",
+            "keywords": "mozilla"
+        },
+        {
+            "title": "Hulu",
+            "url": "http://www.hulu.com/",
+            "keywords": "hulu"
+        },
+        {
+            "title": "GoDaddy",
+            "url": "http://www.godaddy.com/",
+            "keywords": "godaddy"
+        },
+        {
+            "title": "PayPal",
+            "url": "http://www.paypal.com/",
+            "keywords": "paypal"
+        },
+        {
+            "title": "Cnet",
+            "url": "http://www.cnet.com/",
+            "keywords": "cnet"
+        },
+        {
+            "title": "Huffington Post",
+            "url": "http://www.huffingtonpost.com/",
+            "keywords": "huffingtonpost"
+        },
+        {
+            "title": "Fox News",
+            "url": "http://www.foxnews.com/",
+            "keywords": "foxnews;news"
+        },
+        {
+            "title": "Chase",
+            "url": "http://www.chase.com/",
+            "keywords": "chase.com"
+        },
+        {
+            "title": "eHow",
+            "url": "http://www.ehow.com/",
+            "keywords": "ehow.com"
+        },
+        {
+            "title": "Adobe",
+            "url": "http://www.adobe.com/",
+            "keywords": "adobe"
+        },
+        {
+            "title": "Digg",
+            "url": "http://www.digg.com/",
+            "keywords": "digg"
+        },
+        {
+            "title": "Answers.com",
+            "url": "http://www.answers.com/",
+            "keywords": "answers.com"
+        },
+        {
+            "title": "Yelp",
+            "url": "http://m.yelp.com/",
+            "keywords": "yelp.com"
+        },
+        {
+            "title": "Walmart",
+            "url": "http://www.walmart.com/",
+            "keywords": "walmart"
+        },
+        {
+            "title": "MapQuest",
+            "url": "http://www.mapquest.com/",
+            "keywords": "mapquest"
+        },
+        {
+            "title": "Reference.com",
+            "url": "http://www.reference.com/",
+            "keywords": "reference.com"
+        },
+        {
+            "title": "RR.com",
+            "url": "http://www.rr.com/",
+            "keywords": "rr.com"
+        },
+        {
+            "title": "MyWebSearch",
+            "url": "http://www.mywebsearch.com/",
+            "keywords": "mywebsearch"
+        },
+        {
+            "title": "Ezine Articles",
+            "url": "http://ezinearticles.com/",
+            "keywords": "ezine"
+        },
+        {
+            "title": "Ning.com",
+            "url": "http://www.ning.com/",
+            "keywords": "ning"
+        },
+        {
+            "title": "USPS",
+            "url": "http://www.usps.com/",
+            "keywords": "usps"
+        },
+        {
+            "title": "Pogo.com",
+            "url": "http://www.pogo.com/",
+            "keywords": "pogo"
+        },
+        {
+            "title": "Comcast",
+            "url": "http://www.comcast.com/",
+            "keywords": "comcast"
+        },
+        {
+            "title": "Verizon",
+            "url": "http://www.verizon.com/",
+            "keywords": "verizon"
+        },
+        {
+            "title": "BBC",
+            "url": "http://www.bbc.co.uk/",
+            "keywords": "bbc"
+        },
+        {
+            "title": "Typepad",
+            "url": "http://www.typepad.com/",
+            "keywords": "typepad"
+        },
+        {
+            "title": "Target",
+            "url": "http://www.target.com/",
+            "keywords": "target.com"
+        },
+        {
+            "title": "Ask.com",
+            "url": "http://www.ask.com/",
+            "keywords": "ask.com"
+        },
+        {
+            "title": "Washington Post",
+            "url": "http://www.washingtonpost.com/",
+            "keywords": "washingtonpost"
+        },
+        {
+            "title": "AT&T",
+            "url": "http://www.att.com/",
+            "keywords": "att"
+        },
+        {
+            "title": "CBS Sports",
+            "url": "http://www.cbssports.com/",
+            "keywords": "cbssports"
+        },
+        {
+            "title": "BestBuy",
+            "url": "http://www.bestbuy.com/",
+            "keywords": "bestbuy"
+        },
+        {
+            "title": "Pandora",
+            "url": "http://www.pandora.com/",
+            "keywords": "pandora"
+        },
+        {
+            "title": "Tumblr.com",
+            "url": "http://www.tumblr.com/",
+            "keywords": "tumblr"
+        },
+        {
+            "title": "UPS",
+            "url": "http://m.ups.com/?Site:Corporate&amp;cookie:us_en_home&amp;inputImgTag:&amp;setCookie:yes",
+            "keywords": "ups"
+        },
+        {
+            "title": "Wells Fargo",
+            "url": "http://www.wellsfargo.com/",
+            "keywords": "wellsfargo"
+        },
+        {
+            "title": "RapidShare",
+            "url": "http://www.rapidshare.com/",
+            "keywords": "rapidshare"
+        },
+        {
+            "title": "Deviant Art",
+            "url": "http://www.deviantart.com/",
+            "keywords": "deviantart"
+        },
+        {
+            "title": "Live Journal",
+            "url": "http://www.livejournal.com/",
+            "keywords": "livejournal"
+        },
+        {
+            "title": "Newegg",
+            "url": "http://www.newegg.com/",
+            "keywords": "newegg"
+        },
+        {
+            "title": "Expedia",
+            "url": "http://www.expedia.com/",
+            "keywords": "expedia"
+        },
+        {
+            "title": "Zynga",
+            "url": "http://www.zynga.com/",
+            "keywords": "zynga"
+        },
+        {
+            "title": "SalesForce.com",
+            "url": "http://www.salesforce.com/",
+            "keywords": "salesforce"
+        },
+        {
+            "title": "CareerBuilder",
+            "url": "http://www.careerbuilder.com/",
+            "keywords": "careerbuilder"
+        }
+    ],
+    "quickdail": [
+        {
+            "quickdialid": "954",
+            "title": "Google",
+            "url": "http://www.google.com/webhp?client:aff-maxthon-maxthon4&channel:t9",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial77/2020/11/02/16042820436759.png"
+        },
+        {
+            "quickdialid": "955",
+            "title": "Youtube",
+            "url": "https://www.youtube.com/",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial77/2020/11/02/16042820938515.png"
+        },
+        {
+            "quickdialid": "957",
+            "title": "Twitter",
+            "url": "https://twitter.com/",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial77/2020/11/02/16042821826503.png"
+        },
+        {
+            "quickdialid": "958",
+            "title": "Amazon",
+            "url": "https://www.amazon.com/?tag:mxmobile02-20",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial77/2020/11/02/16042822694610.png"
+        },
+        {
+            "quickdialid": "956",
+            "title": "Instagram",
+            "url": "https://www.instagram.com/",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial77/2020/11/02/16042967638627.png"
+        },
+        {
+            "quickdialid": "959",
+            "title": "eBay",
+            "url": "http://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_ff3:1&pub:5575044537&toolid:10001&campid:5337264385&customid:&ipn:psmain&icep_vectorid:229466&kwid:902099&mtid:824&kw:lg",
+            "is_delete": "",
+            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial77/2020/11/02/16042823378240.png"
+        }
+    ],
+    "searchEngine": [
+        {
+            "id": "Google Max",
+            "version": "22",
+            "mobileSearchUrl": "https://www.maxask.com/s/m/?q:{query}",
+            "name": "谷歌",
+            "searchUrl": "https://www.maxask.com/s/m/?q:{query}"
+        }
+    ]
+}

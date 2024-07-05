@@ -482,56 +482,56 @@
             "title": "百度",
             "url": "https://go.maxask.com/bd/m/",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2021/07/27/16273514881060.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/baidu.png"
         },
         {
             "quickdialid": "924",
             "title": "微博",
             "url": "https://weibo.com/",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2020/10/26/16036936016792.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/weibo.png"
         },
         {
             "quickdialid": "913",
             "title": "汽车之家",
             "url": "https://car.m.autohome.com.cn/#pvareaid=6839143",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2020/10/26/16036927519353.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/autohome.png"
         },
         {
             "quickdialid": "928",
             "title": "爱淘宝",
             "url": "https://s.click.taobao.com/qJZRSnt",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2023/11/15/17000212578660.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/itaobao.png"
         },
         {
             "quickdialid": "927",
             "title": "中华网",
             "url": "http://zh.china.com/zh13/",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2020/11/26/16063727689990.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/china.png"
         },
         {
             "quickdialid": "926",
             "title": "拼多多",
             "url": "https://p.pinduoduo.com/sovbsOFj",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2020/11/02/16043007645014.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/pdd.png"
         },
         {
             "quickdialid": "931",
             "title": "AI聊天",
             "url": "https://chat.maxask.com/",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2023/07/29/16906009666823.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/aichat.png"
         },
         {
             "quickdialid": "914",
             "title": "京东",
             "url": "https://u.jd.com/kqQlDzg",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2024/05/28/17168639035284.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/jingdong.png"
         }
     ],
     "searchEngine": [

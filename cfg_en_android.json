@@ -414,9 +414,9 @@
         {
             "id": "Google Max",
             "version": "22",
-            "mobileSearchUrl": "https://www.maxask.com/s/m/?q:{query}",
+            "mobileSearchUrl": "https://www.maxask.com/s/m/?q={query}",
             "name": "Google Max",
-            "searchUrl": "https://www.maxask.com/s/m/?q:{query}"
+            "searchUrl": "https://www.maxask.com/s/m/?q={query}"
         }
     ]
 }

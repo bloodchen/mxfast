@@ -1,10 +1,6 @@
 {
     "topsites": [
-        {
-            "title": "百度一下，你就知道",
-            "url": "http://wap.baidu.com/",
-            "keywords": "baidu;百度;com"
-        },
+        
         {
             "title": "腾讯首页",
             "url": "http://3g.qq.com/",

@@ -507,14 +507,7 @@
             "url": "https://p.pinduoduo.com/sovbsOFj",
             "is_delete": "",
             "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2020/11/02/16043007645014.png"
-        },
-        {
-            "quickdialid": "931",
-            "title": "AI聊天",
-            "url": "https://chat.maxask.com/",
-            "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2023/07/29/16906009666823.png"
-        },
+        }
         {
             "quickdialid": "914",
             "title": "京东",

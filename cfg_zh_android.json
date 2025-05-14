@@ -489,8 +489,9 @@
         },
         {
             "quickdialid": "928",
-            "title": "爱淘宝",
-            "url": "https://s.click.taobao.com/qJZRSnt",
+            "title": "淘宝618",
+            "url_old": "https://s.click.taobao.com/qJZRSnt",
+            "url":"https://s.click.taobao.com/4e3Ipcr",
             "is_delete": "",
             "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2023/11/15/17000212578660.png"
         },

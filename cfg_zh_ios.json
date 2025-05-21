@@ -501,7 +501,8 @@
         {
             "quickdialid": "928",
             "title": "爱淘宝",
-            "url": "https://s.click.taobao.com/qJZRSnt",
+            "url_old": "https://s.click.taobao.com/qJZRSnt",
+            "url":"https://s.click.taobao.com/4e3Ipcr",
             "is_delete": "",
             "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/itaobao.png"
         },

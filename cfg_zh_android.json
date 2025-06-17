@@ -1,6 +1,5 @@
 {
     "topsites": [
-        
         {
             "title": "腾讯首页",
             "url": "http://3g.qq.com/",
@@ -205,11 +204,6 @@
             "title": "阿里巴巴1688.com是全球最大的采购批发市场",
             "url": "http://china.alibaba.com/",
             "keywords": "批发;caigou;gouwu;购物;china.alibaba;alibaba;阿里巴巴;1688"
-        },
-        {
-            "title": "汽车之家 - 我的汽车网站，我的汽车之家",
-            "url": "http://www.autohome.com.cn/",
-            "keywords": "汽车之家;qiche;autohome.com"
         },
         {
             "title": "盛大在线 - 专为无物流的文化和虚拟产品提供数字出版的服务平台",
@@ -481,17 +475,10 @@
             "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2020/10/26/16036936016792.png"
         },
         {
-            "quickdialid": "913",
-            "title": "汽车之家",
-            "url": "https://car.m.autohome.com.cn/#pvareaid=6839143",
-            "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2020/10/26/16036927519353.png"
-        },
-        {
             "quickdialid": "928",
             "title": "淘宝618",
             "url_old": "https://s.click.taobao.com/qJZRSnt",
-            "url":"https://s.click.taobao.com/4e3Ipcr",
+            "url": "https://s.click.taobao.com/4e3Ipcr",
             "is_delete": "",
             "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2023/11/15/17000212578660.png"
         },
@@ -501,13 +488,6 @@
             "url": "http://zh.china.com/zh13/",
             "is_delete": "",
             "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2020/11/26/16063727689990.png"
-        },
-        {
-            "quickdialid": "926",
-            "title": "拼多多",
-            "url": "https://p.pinduoduo.com/sovbsOFj",
-            "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial75/2020/11/02/16043007645014.png"
         },
         {
             "quickdialid": "914",

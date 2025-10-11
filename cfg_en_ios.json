@@ -372,42 +372,42 @@
             "title": "Google",
             "url": "http://www.google.com/webhp?client:aff-maxthon-maxthon4&channel:t9",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial77/2020/11/02/16042820436759.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/google.png"
         },
         {
             "quickdialid": "955",
             "title": "Youtube",
             "url": "https://www.youtube.com/",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial77/2020/11/02/16042820938515.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/youtube.png"
         },
         {
             "quickdialid": "957",
-            "title": "Twitter",
-            "url": "https://twitter.com/",
+            "title": "X",
+            "url": "https://x.com/",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial77/2020/11/02/16042821826503.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/x.png"
         },
         {
             "quickdialid": "958",
             "title": "Amazon",
             "url": "https://www.amazon.com/?tag:mxmobile02-20",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial77/2020/11/02/16042822694610.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/amazon.png"
         },
         {
             "quickdialid": "956",
             "title": "Instagram",
             "url": "https://www.instagram.com/",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial77/2020/11/02/16042967638627.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/instagram.png"
         },
         {
             "quickdialid": "959",
             "title": "eBay",
             "url": "http://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_ff3:1&pub:5575044537&toolid:10001&campid:5337264385&customid:&ipn:psmain&icep_vectorid:229466&kwid:902099&mtid:824&kw:lg",
             "is_delete": "",
-            "iconurl": "https://ios.maxthon.cn/iosattachment/backendios/quickdial77/2020/11/02/16042823378240.png"
+            "iconurl": "https://pc-newtab.maxthonimg.com/static/ios/ebay.png"
         }
     ],
     "searchEngine": [

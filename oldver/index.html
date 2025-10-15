@@ -687,8 +687,12 @@
             try {
                 setTip(t.tipWrapping);
                 setIndeterminate(false);
-                // byteArray 已经是 Base64，不需要再转换
-                const data = byteArray;
+
+                // 明确把 base64 数据转成字符串
+                const data = typeof byteArray === "string"
+                    ? byteArray
+                    : new TextDecoder().decode(byteArray); // 如果万一传入了 Uint8Array，也可自动转换
+
                 setProgress(100);
 
                 if (window.maxthon && typeof window.maxthon.saveData === "function") {
@@ -700,7 +704,7 @@
                         (result) => console.log("saveData result", result),
                         "cont",
                         target,
-                        data,
+                        data, // 确保是字符串
                         true
                     );
 

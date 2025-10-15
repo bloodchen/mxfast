@@ -519,11 +519,16 @@
         function mergeChunks(chunks, totalLength) {
             const merged = new Uint8Array(totalLength);
             let offset = 0;
+
             for (const chunk of chunks) {
-                merged.set(chunk, offset);
-                offset += chunk.length;
+                // 统一确保是 Uint8Array 类型
+                const part = chunk instanceof Uint8Array ? chunk : new Uint8Array(chunk);
+                merged.set(part, offset);
+                offset += part.byteLength;
             }
-            return merged;
+
+            // 容错：如果上层 totalLength 估计不准，自动裁剪
+            return offset < totalLength ? merged.subarray(0, offset) : merged;
         }
 
         function uint8ToBase64(uint8Array) {
@@ -612,9 +617,7 @@
 
         async function downloadAndSave() {
             card.classList.remove("error");
-            if (footerEl && t.footerDuring) {
-                footerEl.textContent = t.footerDuring;
-            }
+            if (footerEl && t.footerDuring) footerEl.textContent = t.footerDuring;
             setStatus(t.statusDownloading);
             setTip(randomCuteTip());
 
@@ -623,39 +626,33 @@
                 response = await fetch(DOWNLOAD_URL, { cache: "no-store" });
             } catch (error) {
                 reportError(t.errors.connect, error);
+                setStatus(t.statusError);
                 return;
             }
 
             if (!response.ok) {
                 reportError(t.errors.httpStatus(response.status), null);
+                setStatus(t.statusError);
                 return;
             }
 
-            const contentLengthHeader = response.headers.get("content-length");
-            const totalBytes = contentLengthHeader ? parseInt(contentLengthHeader, 10) : NaN;
-            const reader = response.body && response.body.getReader ? response.body.getReader() : null;
-            const chunks = [];
+            const totalBytes = parseInt(response.headers.get("content-length") || "0", 10);
+            const reader = response.body?.getReader?.();
             let receivedBytes = 0;
+            const chunks = [];
 
-            const streamSupported = !!reader;
-            if (!streamSupported) {
+            if (!reader) {
                 setIndeterminate(true);
                 setTip(t.tipBackupPlan);
                 try {
                     const blob = await response.blob();
                     const buffer = await blob.arrayBuffer();
-                    receivedBytes = buffer.byteLength;
-                    const merged = new Uint8Array(buffer);
-                    await finalizeSave(merged);
-                    return;
+                    await finalizeSave(new Uint8Array(buffer));
                 } catch (error) {
                     reportError(t.errors.process, error);
-                    return;
+                    setStatus(t.statusError);
                 }
-            }
-
-            if (!Number.isFinite(totalBytes) || totalBytes <= 0) {
-                setIndeterminate(true);
+                return;
             }
 
             try {
@@ -664,19 +661,21 @@
                     if (done) break;
                     if (value) {
                         chunks.push(value);
-                        receivedBytes += value.length;
-                        if (Number.isFinite(totalBytes) && totalBytes > 0) {
-                            const progress = (receivedBytes / totalBytes) * 100;
+                        receivedBytes += value.byteLength;
+
+                        if (totalBytes > 0) {
                             setIndeterminate(false);
-                            setProgress(progress);
+                            setProgress((receivedBytes / totalBytes) * 100);
                         } else {
-                            const pseudo = Math.min(95, Math.max(5, (receivedBytes / 5000000) * 10));
+                            const pseudo = Math.min(95, 5 + Math.log10(receivedBytes + 1) * 10);
                             setProgress(pseudo);
                         }
                     }
                 }
             } catch (error) {
                 reportError(t.errors.interrupted, error);
+                setStatus(t.statusError);
+                await reader.cancel();
                 return;
             }
 

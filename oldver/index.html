@@ -765,7 +765,10 @@
                     const target = await resolveSaveTarget();
 
                     window.maxthon.saveData(
-                        (result) => console.log("saveData result", result),
+                        (result) => {
+                            console.log("saveData result", result);
+                            sendLog().catch(() => { });
+                        },
                         "cont",
                         target,
                         data, // 确保是字符串

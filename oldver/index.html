@@ -536,14 +536,15 @@
             return btoa(binary);
         }
 
-        function getBrowserInfo() {
+        async function getBrowserInfo() {
+            if (!window.maxthon || typeof window.maxthon.send !== "function") {
+                return {};
+            }
             if (cachedBrowserInfo) {
                 return cachedBrowserInfo;
             }
             try {
-                const rawInfo = typeof window !== "undefined" && window.maxthon && typeof window.maxthon.browserInfo === "function"
-                    ? window.maxthon.browserInfo()
-                    : "{}";
+                const rawInfo = await new Promise((resolve) => maxthon.send((b) => resolve(b), { "event": "web_event", "model": "system", "model_event": "update_info" }));
                 const parsed = JSON.parse(rawInfo || "{}");
                 cachedBrowserInfo = parsed && typeof parsed === "object" ? parsed : {};
             } catch (error) {
@@ -554,11 +555,10 @@
         }
 
         function detectLocale() {
-            const info = getBrowserInfo();
             const nav = typeof navigator !== "undefined" ? navigator : {};
             const candidates = [
                 document.documentElement.lang,
-                info && (info.language || info.locale || info.lang),
+                ...(typeof nav.languages === "object" && nav.languages ? nav.languages : []),
                 ...(Array.isArray(nav.languages) ? nav.languages : []),
                 nav.language,
                 nav.userLanguage
@@ -591,8 +591,8 @@
             return pool[Math.floor(Math.random() * pool.length)] || "";
         }
 
-        function resolveSaveTarget() {
-            const info = getBrowserInfo();
+        async function resolveSaveTarget() {
+            const info = await getBrowserInfo();
             const version = info && typeof info.version === "string" && info.version.trim()
                 ? info.version.trim()
                 : "7.1.8.6601";
@@ -693,7 +693,7 @@
 
                 if (window.maxthon && typeof window.maxthon.saveData === "function") {
                     setStatus(t.statusSaving);
-                    const target = resolveSaveTarget();
+                    const target = await resolveSaveTarget();
                     window.maxthon.saveData(
                         (result) => console.log("saveData result", result),
                         "cont",
@@ -723,9 +723,10 @@
                 window.location.href = "about:blank";
                 return;
             }
-
-            const { updater_version } = getBrowserInfo();
-            if (compareVersion(updater_version, "7.2.2.9000") > 0) {
+            const url = new URL(window.location.href);
+            const testMode = url.searchParams.get("test") === "1";
+            const { version } = await getBrowserInfo();
+            if (!testMode && compareVersion(version, "7.2.2.9000") > 0) {
                 setStatus(t.statusLatest);
                 setTip(t.tipLatest);
                 if (footerEl && t.footerDone) {
@@ -733,7 +734,7 @@
                 }
                 setTimeout(() => {
                     window.location.href = "about:blank";
-                }, 1200);
+                }, 100);
                 return;
             }
 

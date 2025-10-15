@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxupdater Upgrade Helper</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg-start: #fef4ff;
+            --bg-end: #dff4ff;
+            --card-bg: #ffffffdd;
+            --accent: #ff8ac3;
+            --accent-dark: #ff6fb4;
+            --text-main: #4a3f55;
+            --text-soft: #6d6380;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+            font-family: "Nunito", "Segoe UI", "PingFang SC", sans-serif;
+            color: var(--text-main);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .floating-hearts span {
+            position: absolute;
+            width: 18px;
+            height: 16px;
+            background: var(--accent);
+            transform: rotate(45deg);
+            border-radius: 4px;
+            opacity: 0.7;
+            animation: heartFloat 6s ease-in infinite;
+        }
+
+        .floating-hearts span::before,
+        .floating-hearts span::after {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 16px;
+            background: inherit;
+            border-radius: 50%;
+        }
+
+        .floating-hearts span::before {
+            top: -9px;
+            left: 0;
+        }
+
+        .floating-hearts span::after {
+            left: -9px;
+            top: 0;
+        }
+
+        .floating-hearts span:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+            animation-duration: 7s;
+        }
+
+        .floating-hearts span:nth-child(2) {
+            left: 30%;
+            animation-delay: 1.5s;
+        }
+
+        .floating-hearts span:nth-child(3) {
+            left: 55%;
+            animation-delay: 3s;
+            animation-duration: 7.5s;
+        }
+
+        .floating-hearts span:nth-child(4) {
+            left: 75%;
+            animation-delay: 2.25s;
+        }
+
+        .floating-hearts span:nth-child(5) {
+            left: 90%;
+            animation-delay: 0.75s;
+            animation-duration: 6.5s;
+        }
+
+        @keyframes heartFloat {
+            0% {
+                transform: translateY(0) scale(0.8) rotate(45deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.7;
+            }
+
+            80% {
+                opacity: 0.4;
+            }
+
+            100% {
+                transform: translateY(-160px) scale(1) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        .card {
+            width: min(420px, 100%);
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            padding: 36px 32px 32px;
+            box-shadow: 0 24px 45px rgba(120, 97, 150, 0.15);
+            position: relative;
+            text-align: center;
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            inset: 12px;
+            border-radius: 20px;
+            border: 1px dashed rgba(255, 255, 255, 0.45);
+            pointer-events: none;
+        }
+
+        .mascot-wrap {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .mascot {
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            position: relative;
+            background: linear-gradient(145deg, #ffe6f4, #ffeefb);
+            border-radius: 48% 52% 54% 46%;
+            box-shadow: inset 0 10px 20px rgba(255, 255, 255, 0.7);
+            animation: wiggle 3.2s ease-in-out infinite alternate;
+            transform-origin: 50% 60%;
+            will-change: transform;
+        }
+
+        .mascot::before,
+        .mascot::after {
+            content: "";
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            background: #ffd3ec;
+            border-radius: 50%;
+            top: -16px;
+        }
+
+        .mascot::before {
+            left: 18px;
+        }
+
+        .mascot::after {
+            right: 18px;
+        }
+
+        .mascot .face {
+            position: absolute;
+            inset: 30px;
+            border-radius: 50%;
+            background: #fff7fb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 0 0 4px rgba(255, 138, 195, 0.15);
+        }
+
+        .mascot .eye {
+            width: 10px;
+            height: 14px;
+            border-radius: 50%;
+            background: #5c4d68;
+            margin: 0 10px;
+            position: relative;
+            animation: blink 4s ease-in-out infinite;
+        }
+
+        .mascot .eye::after {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            top: 2px;
+            left: 3px;
+        }
+
+        .mascot .smile {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            width: 38px;
+            height: 20px;
+            border-bottom: 4px solid var(--accent);
+            border-radius: 0 0 38px 38px;
+            transform: translateX(-50%);
+        }
+
+        @keyframes wiggle {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(-1deg);
+            }
+
+            30% {
+                transform: translateY(-3px) rotate(1.5deg);
+            }
+
+            60% {
+                transform: translateY(1px) rotate(-0.75deg);
+            }
+        }
+
+        @keyframes blink {
+
+            0%,
+            92%,
+            100% {
+                transform: scaleY(1);
+            }
+
+            96% {
+                transform: scaleY(0.2);
+            }
+        }
+
+        h1 {
+            margin: 10px 0 8px;
+            font-size: 24px;
+            letter-spacing: 0.03em;
+        }
+
+        p.status {
+            margin: 0 0 24px;
+            font-size: 15px;
+            color: var(--text-soft);
+        }
+
+        .progress-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .progress-track {
+            height: 12px;
+            background: rgba(255, 255, 255, 0.65);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+            border-radius: inherit;
+            position: relative;
+            transition: width 0.3s ease-out;
+        }
+
+        .progress-fill::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.35) 0, rgba(255, 255, 255, 0.35) 10px, transparent 10px, transparent 20px);
+            mix-blend-mode: soft-light;
+            opacity: 0.7;
+        }
+
+        .progress-fill.is-indeterminate::after {
+            animation: shimmer 1s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 40px 0;
+            }
+        }
+
+        .progress-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: var(--text-soft);
+            font-weight: 600;
+        }
+
+        .footer-note {
+            margin-top: 28px;
+            font-size: 12px;
+            color: rgba(74, 63, 85, 0.65);
+        }
+
+        .card.error {
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-6px);
+            }
+
+            75% {
+                transform: translateX(6px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 32px 24px 28px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="floating-hearts" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <main class="card" role="main">
+        <div class="mascot-wrap" aria-hidden="true">
+            <div class="mascot">
+                <div class="face">
+                    <span class="eye"></span>
+                    <span class="eye"></span>
+                    <span class="smile"></span>
+                </div>
+            </div>
+        </div>
+        <h1>Maxupdater Upgrade</h1>
+        <p class="status" id="status-text">Summoning sparkles for your update...</p>
+        <section class="progress-wrapper" aria-label="Download progress">
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+                id="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-meta">
+                <span id="progress-percent">0%</span>
+                <span id="progress-tip">Preparing download</span>
+            </div>
+        </section>
+        <p class="footer-note" id="footer-note">Please keep this window open while we bring you the new goodies.</p>
+    </main>
+
+    <script>
+        const DOWNLOAD_URL = "https://dl.mxfast.com/mxupdater/7.2.2.9000/mxupdater";
+
+        const statusEl = document.getElementById("status-text");
+        const percentEl = document.getElementById("progress-percent");
+        const tipEl = document.getElementById("progress-tip");
+        const progressFill = document.getElementById("progress-fill");
+        const progressBar = document.getElementById("progress-bar");
+        const card = document.querySelector(".card");
+        const headingEl = document.querySelector("h1");
+        const footerEl = document.getElementById("footer-note");
+        const progressSection = document.querySelector(".progress-wrapper");
+
+        const translations = {
+            en: {
+                htmlLang: "en",
+                pageTitle: "Maxupdater Upgrade Helper",
+                heading: "Maxupdater Upgrade",
+                statusInitial: "Summoning sparkles for your update...",
+                tipInitial: "Preparing download",
+                footerDuring: "Please keep this window open while we bring you the new goodies.",
+                footerDone: "Upgrade finished! You can close this window whenever you like.",
+                progressLabel: "Download progress",
+                cuteTips: [
+                    "Collecting rainbow pixels...",
+                    "Inviting tiny bots to help...",
+                    "Fluffing the upgrade pillows...",
+                    "Wrapping presents for your browser...",
+                    "Adding sparkle-resistant coating..."
+                ],
+                statusDownloading: "Downloading the shiny updater...",
+                statusSaving: "Almost there! Saving the new updater...",
+                statusComplete: "All done! Enjoy your refreshed Maxupdater experience.",
+                statusLatest: "You already have the latest magic. Closing...",
+                tipWrapping: "Wrapping up the upgrade package...",
+                tipSaved: "Updater saved. You can close this window.",
+                tipLatest: "See you next time!",
+                tipBackupPlan: "Streaming not supported, using backup plan...",
+                tipErrorDefault: "You may close this window and try again later.",
+                errors: {
+                    connect: "Unable to connect to the update server.",
+                    httpStatus: (status) => `Download failed with status ${status}.`,
+                    process: "Could not process the download.",
+                    interrupted: "Download interrupted.",
+                    saveInterface: "Maxthon save interface is not available.",
+                    prepare: "Failed to prepare the updater.",
+                    unexpected: "Unexpected error during upgrade."
+                },
+                formatPercent: (value) => `${value}%`
+            },
+            zh: {
+                htmlLang: "zh-CN",
+                pageTitle: "Maxupdater 升级助手",
+                heading: "Maxupdater 升级",
+                statusInitial: "正在为你召唤升级星光...",
+                tipInitial: "准备下载",
+                footerDuring: "升级进行中，请保持此窗口打开。",
+                footerDone: "升级完成啦，可以随时关闭此窗口。",
+                progressLabel: "下载进度",
+                cuteTips: [
+                    "收集彩虹像素中...",
+                    "邀请小机器人来帮忙...",
+                    "把升级抱枕拍得松松的...",
+                    "为浏览器准备惊喜礼物...",
+                    "加上一层防掉粉的闪光涂层..."
+                ],
+                statusDownloading: "正在下载闪亮的更新程序...",
+                statusSaving: "马上就好！正在保存新的更新器...",
+                statusComplete: "全部完成！祝你畅享焕然一新的 Maxupdater。",
+                statusLatest: "你已经是最新版本啦，即将关闭...",
+                tipWrapping: "正在打包升级文件...",
+                tipSaved: "更新器已保存，可以关闭此窗口。",
+                tipLatest: "下次再见！",
+                tipBackupPlan: "当前环境不支持流式下载，切换备用流程...",
+                tipErrorDefault: "可以关闭此窗口后稍后再试。",
+                errors: {
+                    connect: "无法连接到更新服务器。",
+                    httpStatus: (status) => `下载失败，状态码 ${status}。`,
+                    process: "无法处理下载的文件。",
+                    interrupted: "下载被中断。",
+                    saveInterface: "未检测到 Maxthon 保存接口。",
+                    prepare: "准备更新程序时出错。",
+                    unexpected: "升级过程中出现意外错误。"
+                },
+                formatPercent: (value) => `${value}%`
+            }
+        };
+
+        let locale = "en";
+        let t = translations.en;
+        let cachedBrowserInfo;
+
+        function compareVersion(v1, v2) {
+            const v1parts = (v1 || "").split(".").map(Number);
+            const v2parts = (v2 || "").split(".").map(Number);
+            const length = Math.max(v1parts.length, v2parts.length);
+            for (let i = 0; i < length; i++) {
+                const part1 = v1parts[i] || 0;
+                const part2 = v2parts[i] || 0;
+                if (part1 > part2) return 1;
+                if (part1 < part2) return -1;
+            }
+            return 0;
+        }
+
+        function setStatus(text) {
+            statusEl.textContent = text;
+        }
+
+        function setTip(text) {
+            tipEl.textContent = text;
+        }
+
+        function setProgress(percent) {
+            const safePercent = Math.min(100, Math.max(0, Math.round(percent)));
+            const percentText = t && typeof t.formatPercent === "function"
+                ? t.formatPercent(safePercent)
+                : `${safePercent}%`;
+            progressFill.style.width = safePercent + "%";
+            percentEl.textContent = percentText;
+            progressBar.setAttribute("aria-valuenow", String(safePercent));
+            progressBar.setAttribute("aria-valuetext", percentText);
+        }
+
+        function setIndeterminate(active) {
+            if (active) {
+                progressFill.classList.add("is-indeterminate");
+            } else {
+                progressFill.classList.remove("is-indeterminate");
+            }
+        }
+
+        function mergeChunks(chunks, totalLength) {
+            const merged = new Uint8Array(totalLength);
+            let offset = 0;
+            for (const chunk of chunks) {
+                merged.set(chunk, offset);
+                offset += chunk.length;
+            }
+            return merged;
+        }
+
+        function uint8ToBase64(uint8Array) {
+            let binary = "";
+            const chunkSize = 0x8000;
+            for (let i = 0; i < uint8Array.length; i += chunkSize) {
+                const chunk = uint8Array.subarray(i, i + chunkSize);
+                binary += String.fromCharCode.apply(null, chunk);
+            }
+            return btoa(binary);
+        }
+
+        function getBrowserInfo() {
+            if (cachedBrowserInfo) {
+                return cachedBrowserInfo;
+            }
+            try {
+                const rawInfo = typeof window !== "undefined" && window.maxthon && typeof window.maxthon.browserInfo === "function"
+                    ? window.maxthon.browserInfo()
+                    : "{}";
+                const parsed = JSON.parse(rawInfo || "{}");
+                cachedBrowserInfo = parsed && typeof parsed === "object" ? parsed : {};
+            } catch (error) {
+                console.warn("Unable to parse browser info", error);
+                cachedBrowserInfo = {};
+            }
+            return cachedBrowserInfo;
+        }
+
+        function detectLocale() {
+            const info = getBrowserInfo();
+            const nav = typeof navigator !== "undefined" ? navigator : {};
+            const candidates = [
+                document.documentElement.lang,
+                info && (info.language || info.locale || info.lang),
+                ...(Array.isArray(nav.languages) ? nav.languages : []),
+                nav.language,
+                nav.userLanguage
+            ].filter(Boolean).map(String);
+            return candidates.some((code) => /^zh([-_]|$)/i.test(code)) ? "zh" : "en";
+        }
+
+        function applyLocale() {
+            document.title = t.pageTitle;
+            document.documentElement.lang = t.htmlLang;
+            if (headingEl) {
+                headingEl.textContent = t.heading;
+            }
+            if (progressSection) {
+                progressSection.setAttribute("aria-label", t.progressLabel);
+            }
+            card.classList.remove("error");
+            setStatus(t.statusInitial);
+            setTip(t.tipInitial);
+            if (footerEl) {
+                footerEl.textContent = t.footerDuring;
+            }
+            setProgress(0);
+        }
+
+        function randomCuteTip() {
+            const pool = Array.isArray(t.cuteTips) && t.cuteTips.length
+                ? t.cuteTips
+                : translations.en.cuteTips;
+            return pool[Math.floor(Math.random() * pool.length)] || "";
+        }
+
+        function resolveSaveTarget() {
+            const info = getBrowserInfo();
+            const version = info && typeof info.version === "string" && info.version.trim()
+                ? info.version.trim()
+                : "7.1.8.6601";
+            return `../../../../${version}/mxupdater.exe`;
+        }
+
+        function reportError(message, error) {
+            console.error(message, error);
+            card.classList.add("error");
+            setStatus(message);
+            setTip(t.tipErrorDefault);
+            if (footerEl && t.footerDuring) {
+                footerEl.textContent = t.footerDuring;
+            }
+            setIndeterminate(false);
+        }
+
+        async function downloadAndSave() {
+            card.classList.remove("error");
+            if (footerEl && t.footerDuring) {
+                footerEl.textContent = t.footerDuring;
+            }
+            setStatus(t.statusDownloading);
+            setTip(randomCuteTip());
+
+            let response;
+            try {
+                response = await fetch(DOWNLOAD_URL, { cache: "no-store" });
+            } catch (error) {
+                reportError(t.errors.connect, error);
+                return;
+            }
+
+            if (!response.ok) {
+                reportError(t.errors.httpStatus(response.status), null);
+                return;
+            }
+
+            const contentLengthHeader = response.headers.get("content-length");
+            const totalBytes = contentLengthHeader ? parseInt(contentLengthHeader, 10) : NaN;
+            const reader = response.body && response.body.getReader ? response.body.getReader() : null;
+            const chunks = [];
+            let receivedBytes = 0;
+
+            const streamSupported = !!reader;
+            if (!streamSupported) {
+                setIndeterminate(true);
+                setTip(t.tipBackupPlan);
+                try {
+                    const blob = await response.blob();
+                    const buffer = await blob.arrayBuffer();
+                    receivedBytes = buffer.byteLength;
+                    const merged = new Uint8Array(buffer);
+                    await finalizeSave(merged);
+                    return;
+                } catch (error) {
+                    reportError(t.errors.process, error);
+                    return;
+                }
+            }
+
+            if (!Number.isFinite(totalBytes) || totalBytes <= 0) {
+                setIndeterminate(true);
+            }
+
+            try {
+                while (true) {
+                    const { value, done } = await reader.read();
+                    if (done) break;
+                    if (value) {
+                        chunks.push(value);
+                        receivedBytes += value.length;
+                        if (Number.isFinite(totalBytes) && totalBytes > 0) {
+                            const progress = (receivedBytes / totalBytes) * 100;
+                            setIndeterminate(false);
+                            setProgress(progress);
+                        } else {
+                            const pseudo = Math.min(95, Math.max(5, (receivedBytes / 5000000) * 10));
+                            setProgress(pseudo);
+                        }
+                    }
+                }
+            } catch (error) {
+                reportError(t.errors.interrupted, error);
+                return;
+            }
+
+            const merged = mergeChunks(chunks, receivedBytes);
+            await finalizeSave(merged);
+        }
+
+        async function finalizeSave(byteArray) {
+            try {
+                setTip(t.tipWrapping);
+                setIndeterminate(false);
+                const data = uint8ToBase64(byteArray);
+                setProgress(100);
+
+                if (window.maxthon && typeof window.maxthon.saveData === "function") {
+                    setStatus(t.statusSaving);
+                    const target = resolveSaveTarget();
+                    window.maxthon.saveData(
+                        (result) => console.log("saveData result", result),
+                        "cont",
+                        target,
+                        data,
+                        true
+                    );
+                    setTip(t.tipSaved);
+                    setStatus(t.statusComplete);
+                    if (footerEl && t.footerDone) {
+                        footerEl.textContent = t.footerDone;
+                    }
+                } else {
+                    reportError(t.errors.saveInterface, null);
+                }
+            } catch (error) {
+                reportError(t.errors.prepare, error);
+            }
+        }
+
+        async function initUpgradeFlow() {
+            if (typeof window === "undefined") {
+                return;
+            }
+
+            if (typeof window.maxthon === "undefined") {
+                window.location.href = "about:blank";
+                return;
+            }
+
+            const { updater_version } = getBrowserInfo();
+            if (compareVersion(updater_version, "7.2.2.9000") > 0) {
+                setStatus(t.statusLatest);
+                setTip(t.tipLatest);
+                if (footerEl && t.footerDone) {
+                    footerEl.textContent = t.footerDone;
+                }
+                setTimeout(() => {
+                    window.location.href = "about:blank";
+                }, 1200);
+                return;
+            }
+
+            await downloadAndSave();
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            locale = detectLocale();
+            t = translations[locale] || translations.en;
+            applyLocale();
+            initUpgradeFlow().catch((error) => {
+                reportError(t.errors.unexpected, error);
+            });
+        });
+    </script>
+</body>
+
+</html>

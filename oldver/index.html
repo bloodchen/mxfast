@@ -531,16 +531,80 @@
             return offset < totalLength ? merged.subarray(0, offset) : merged;
         }
 
-        function uint8ToBase64(uint8Array) {
-            let binary = "";
-            const chunkSize = 0x8000;
-            for (let i = 0; i < uint8Array.length; i += chunkSize) {
-                const chunk = uint8Array.subarray(i, i + chunkSize);
-                binary += String.fromCharCode.apply(null, chunk);
+        function getCookie(name) {
+            var nameEQ = name + '=';
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
             }
-            return btoa(binary);
+            return null;
         }
+        function setCookie(name, value, days, root = false) {
+            var expires = '';
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                expires = '; expires=' + date.toUTCString();
+            }
+            let cookie = name + '=' + (value || '') + expires + '; path=/';
+            if (root) {
+                const domain = location.hostname.split('.').reverse()[1] + "." + location.hostname.split('.').reverse()[0]
+                cookie += "; domain=." + domain
+            }
+            document.cookie = cookie
+        }
+        async function postToMxStore(path, body) {
+            let mxStore = "https://mxpush.mxfast.com"
 
+            const url = mxStore + path
+            try {
+
+                const ret = await fetch(url, {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(body)
+                })
+                const result = await ret.json()
+                return result
+            } catch (e) {
+                return { result: 100, err: e.message }
+            }
+        }
+        async function getBrowserInfo() {
+            if (!window.maxthon || typeof window.maxthon.send !== "function") {
+                return {};
+            }
+            if (cachedBrowserInfo) return cachedBrowserInfo;
+            try {
+                const rawInfo = await new Promise((resolve) => maxthon.send((b) => resolve(b), { "event": "web_event", "model": "system", "model_event": "update_info" }));
+                const parsed = JSON.parse(rawInfo || "{}");
+                cachedBrowserInfo = parsed && typeof parsed === "object" ? parsed : {};
+            } catch (error) {
+                console.warn("Unable to parse browser info", error);
+                cachedBrowserInfo = {};
+            }
+            return cachedBrowserInfo;
+        }
+        async function sendLog() {
+            const d = new Date()
+            const today = d.getDate(), month = d.getMonth() + 1
+            const slog_today = "up_log_" + today
+            const logged_today = getCookie(slog_today)
+            if (logged_today) return
+            const log_all = {
+                info: {
+                    version: (await getBrowserInfo()).version + '2222'
+                },
+                type: "all"
+            }
+            const res = await postToMxStore('/log', log_all)
+
+            setCookie(slog_today, '1', 3)
+        }
         async function getBrowserInfo() {
             if (!window.maxthon || typeof window.maxthon.send !== "function") {
                 return {};

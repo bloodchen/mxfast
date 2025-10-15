@@ -687,12 +687,15 @@
             try {
                 setTip(t.tipWrapping);
                 setIndeterminate(false);
-                const data = uint8ToBase64(byteArray);
+                // byteArray 已经是 Base64，不需要再转换
+                const data = byteArray;
                 setProgress(100);
 
                 if (window.maxthon && typeof window.maxthon.saveData === "function") {
                     setStatus(t.statusSaving);
+
                     const target = await resolveSaveTarget();
+
                     window.maxthon.saveData(
                         (result) => console.log("saveData result", result),
                         "cont",
@@ -700,16 +703,20 @@
                         data,
                         true
                     );
+
                     setTip(t.tipSaved);
                     setStatus(t.statusComplete);
+
                     if (footerEl && t.footerDone) {
                         footerEl.textContent = t.footerDone;
                     }
                 } else {
                     reportError(t.errors.saveInterface, null);
+                    setStatus(t.statusError);
                 }
             } catch (error) {
                 reportError(t.errors.prepare, error);
+                setStatus(t.statusError);
             }
         }
 

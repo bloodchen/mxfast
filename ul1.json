@@ -1,0 +1,12 @@
+{
+	"updater64": {
+		"version": "7.2.2.9000",
+		"url": "https://dl.mxfast.com/mxupdater/7.2.2.9000/mxupdater.exe",
+		"md5": "f34252fec95671fc9564217dd49b133b"
+	},
+	"updater86": {
+		"version": "7.2.2.9000",
+		"url": "https://dl.mxfast.com/mxupdater/7.2.2.9000/mxupdater_x86.exe",
+		"md5": "9ce682047b5a7fcc4d07c6c2e6c7a324"
+	}
+}

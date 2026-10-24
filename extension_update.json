@@ -1,0 +1,17 @@
+{
+	"extensions": {
+		"apkomdimgoabnaokkggecggjhbbfakmo": {
+			"version": "2.0.2",
+			"url": "https://pub.mxfast.net/file/mx-pub/inst/win/extensions/apkomdimgoabnaokkggecggjhbbfakmo.crx",
+			"md5": "deac3fde0d727bbe5c2935b946ede26a"
+		},
+		"kmdekmflddcoiebeolkdhdjjclmlfdmj": {
+			"version": "0.1.8",
+			"url": "https://pub.mxfast.net/file/mx-pub/inst/win/extensions/piu-0.1.8.crx",
+			"md5": "2a3f599cc386fc81718ceca1d7477b9c"
+		}
+	},
+	"remove_extensions": [
+	    "mpicdbelebeafnomkpgphnalfkggidpp"
+	]
+}

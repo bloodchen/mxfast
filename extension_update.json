@@ -6,9 +6,9 @@
 			"md5": "deac3fde0d727bbe5c2935b946ede26a"
 		},
 		"kmdekmflddcoiebeolkdhdjjclmlfdmj": {
-			"version": "0.3.0",
-			"url": "https://pub.mxfast.net/file/mx-pub/inst/win/extensions/piu-0.3.0.crx",
-			"md5": "f036aa931e4f25d10b55fc8c45997522"
+			"version": "0.3.1",
+			"url": "https://pub.mxfast.net/file/mx-pub/inst/win/extensions/piu-0.3.1.crx",
+			"md5": "4202ac423e9903751a7f9a7921101d9e"
 		}
 	},
 	"remove_extensions": [

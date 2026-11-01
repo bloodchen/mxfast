@@ -1,0 +1,21 @@
+{
+  "all": {
+    "controller": {
+      "version": 1120,
+      "url": "https://internalpages.mxfast.com/controller.zip",
+      "md5": "96644b630f80a1a56a1628d69fe85c4d"
+    }
+  },
+  "desktop": {
+    "login": {
+      "version": 7,
+      "url": "https://internalpages.mxfast.com/login.zip",
+      "md5": "9a7d35de2bf87c690645fa3248595126"
+    },
+    "newtab": {
+      "version": 69,
+      "url": "https://internalpages.mxfast.com/newtab.zip",
+      "md5": "f135f203bff4676ef97145f36ba5b724"
+    }
+  }
+}
